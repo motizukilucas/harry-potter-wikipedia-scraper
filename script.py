@@ -28,6 +28,14 @@ fourth_ul = third_ul.find_next("ul")
 fifth_ul = fourth_ul.find_next("ul") # the fifth one already contains Hannah (the first charc
 #ter that appears listed)
 
+# creates file with the Hannah li inside separed
+# with open('result.txt', 'w') as file:
+    # file.write(fifth_ul.prettify().encode('utf8'))
+
 with open('result.txt', 'w') as file:
-    file.write(fifth_ul.prettify().encode('utf8'))
+    file.write(fifth_ul.li.a.prettify().encode('utf8'))
+    
+    # all_li = fifth_ul.find_all("li")
+    # first_a = all_li.a
+    # file.write(all_li.encode('utf8'))
     
