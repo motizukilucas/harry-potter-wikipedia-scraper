@@ -49,8 +49,14 @@ with open('result.txt', 'w') as file:
     for link2 in parsed_char_links:     
         print(link2)
 
+    # /wiki/Ludo_Bagman
+    # https://en.wikipedia.org/wiki/Ministry_of_Magic#Ludo_Bagman
+
     # loop char link
     #     acesar o link 
     #     se for diferente de https://en.wikipedia.org + link
     #         salvar na array novos links
+
+    # => a sacada aqui e ver se eu estou sendo de fato redirecionado, pois via requests, ele me da
+    # que nao estou sendo
 
