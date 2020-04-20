@@ -23,7 +23,7 @@ with open('result.txt', 'w') as file:
     #         li_item = li_item.find_next("li")
     #     first_ul = first_ul.find_next("ul")
 
-    char_links = [240]
+    char_links = []
     for x in range(0, 23):
         li_item = first_ul.li
         for y in range(0, 20):
@@ -36,13 +36,20 @@ with open('result.txt', 'w') as file:
             li_item = li_item.find_next("li")
         first_ul = first_ul.find_next("ul")
 
+    parsed_char_links = []
     for link in char_links:
         if '#' not in str(link): 
             if '_' in str(link):
-                print(link)
+                if 'Number' not in str(link):
+                    if 'and' not in str(link):
+                        if '(Harry_Potter)' not in str(link):
+                            if str(link) not in parsed_char_links:
+                                parsed_char_links.append(str(link))
+
+    for link2 in parsed_char_links:     
+        print(link2)
 
     # loop char link
-    #   se nao tiver # hastag salve na nova array && se tiver _ underline salve na nova sarray
     #     acesar o link 
     #     se for diferente de https://en.wikipedia.org + link
     #         salvar na array novos links
